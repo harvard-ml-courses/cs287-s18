@@ -1,0 +1,208 @@
+\documentclass{article}
+
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{lipsum}
+\usepackage{todonotes}
+\usepackage[accepted]{icml2017}
+\icmltitlerunning{CS 287 Final Project Template}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Project Template}
+\begin{icmlauthorlist}
+  \icmlauthor{Alexander M. Rush}{}
+\icmlauthor{Yuntian Deng}{}
+\end{icmlauthorlist}
+
+\vskip 0.3in
+]
+
+\begin{abstract}
+  \begin{itemize}
+  \item This document describes the expected style, structure, and rough proportions for your final project write-up.
+  \item While you are free to break from this structure, consider it a strong prior for our expectations of the final report.
+\item Length is a hard constraint. You are only allowed max \textbf{8 pages} in this format. While you can include supplementary material, it will not be factored into the grading process. It is your responsibility to convey the main contributions of the work in the length given.
+  \end{itemize}
+
+
+\lipsum[1]
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+
+Example Structure:
+\begin{itemize}
+\item What is the problem of interest and what (high-level) are the current best methods for solving it?
+\item How do you plan to improve/understand/modify this or related methods?
+\item Preview your research process, list the contributions you made, and summarize your experimental findings.
+\end{itemize}
+\lipsum[1-4]
+
+\section{Background}
+Example Structure:
+\begin{itemize}
+\item What information does a non-expert need to know about the problem domain?
+\item What data exists for this problem?
+\item What are the challenges/opportunities inherent to the data? (High dimensional, sparse, missing data, noise, structure, discrete/continuous, etc?)
+\end{itemize}
+\lipsum[4-8]
+
+
+\section{Related Work}
+
+Example Structure:
+\begin{itemize}
+\item What 3-5 papers have been published in this space?
+\item How do these  differ from your approach?
+\item What data or methodologies do each of these works use?
+\item How do you plan to compare to these methods?
+\end{itemize}
+
+\lipsum[7-9]
+
+
+\section{Model}
+
+Example Structure:
+
+\begin{itemize}
+\item What is the formal definition of your problem?
+\item What is the precise mathematical model you are using to represent it? In almost all cases this will use the probabilistic language from class, e.g.
+  \begin{equation}
+  z \sim {\cal N}(0, \sigma^2)\label{eq:1}
+\end{equation}
+But it may also be a neural network, or a non-probabilistic loss,
+\[ h_t \gets \mathrm{RNN}(x_{t}, h_{t-1} )\]
+
+This is also a good place to reference a diagram such as Figure~\ref{fig:diagram}.
+
+\item What are the parameters or latent variables of this model that you plan on estimating or inferring? Be explicit. How many are there? Which are you assuming are given? How do these relate to the original problem description?
+\end{itemize}
+
+\lipsum[4-8]
+
+\begin{figure}
+  \centering
+  \missingfigure[figheight=8cm]{}
+  \caption{\label{fig:diagram} This is a good place to include a diagram showing how your model works. Examples include a graphical model or a neural network block diagram.}
+\end{figure}
+
+
+\section{Inference (or Training)}
+
+\begin{itemize}
+\item How do you plan on training your parameters / inferring the
+  states of your latent variables (MLE / MAP / Backprop / VI / EM / BP / ...)
+
+\item What are the assumptions implicit in this technique? Is it an approximation or exact? If it is an approximation what bound does it optimize?
+
+\item What is the explicit method / algorithm that you derive for learning these parameters?
+\end{itemize}
+
+\lipsum[4-8]
+
+\begin{algorithm}
+  \begin{algorithmic}
+    \STATE{\lipsum[1]}
+  \end{algorithmic}
+  \caption{Your Pseudocode}
+\end{algorithm}
+
+
+
+
+\section{Methods}
+
+\begin{itemize}
+\item What are the exact details of the dataset that you used? (Number of data points / standard or non-standard / synthetic or real / exact form of the data)
+
+\item What are the exact details of the features you computed?
+
+
+\item How did you train or run inference? (Optimization method / hyperparameter settings / amount of time ran / what did you implement versus borrow / how were baselines computed).
+
+\item What are the exact details of the metric used?
+\end{itemize}
+
+\lipsum[4-8]
+
+\section{Results}
+
+\begin{itemize}
+\item What were the results comparing previous work / baseline systems / your systems on the main task?
+\item What were the secondary results comparing the variants of your system?
+\item This section should be fact based and relatively dry. What happened, what was significant?
+\end{itemize}
+
+\begin{table*}
+  \centering
+  \missingfigure{}
+  \caption{This is usually a table. Tables with numbers are generally easier to read than graphs, so prefer when possible.}
+  \label{fig:mainres}
+\end{table*}
+
+
+\begin{table}
+  \centering
+  \missingfigure[figheight=5cm]{}
+  \caption{Secondary table or figure in results section.}
+  \label{fig:mainres}
+\end{table}
+
+\lipsum[7-11]
+
+\section{Discussion}
+
+
+
+\begin{itemize}
+\item What conclusions can you draw from the results section?
+\item Is there further analysis you can do into the results of the system? Here is a good place to include visualizations, graphs, qualitative analysis of your results.
+
+\item  What questions remain open? What did you think might work, but did not?
+\end{itemize}
+
+\lipsum[4-8]
+
+\begin{figure}
+  \centering
+  \missingfigure{}
+  \missingfigure{}
+  \missingfigure{}
+  \caption{Visualizations of the internals of the system.}
+\end{figure}
+
+\section{Conclusion}
+
+\begin{itemize}
+\item What happened?
+\item What next?
+\end{itemize}
+
+\lipsum[4-6]
+
+% \section*{Acknowledgements}
+
+% \textbf{Do not} include acknowledgements in the initial version of
+% the paper submitted for blind review.
+
+% If a paper is accepted, the final camera-ready version can (and
+% probably should) include acknowledgements. In this case, please
+% place such acknowledgements in an unnumbered section at the
+% end of the paper. Typically, this will include thanks to reviewers
+% who gave useful comments, to colleagues who contributed to the ideas,
+% and to funding agencies and corporate sponsors that provided financial
+% support.
+
+
+\bibliography{example}
+\bibliographystyle{icml2017}
+
+\end{document}
